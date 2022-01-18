@@ -20,13 +20,13 @@ export default function MyRoutes() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
-        path="/dashboard"
-        element={
-          <RequireAuth redirectTo="/">
-            <Dashboard />
-          </RequireAuth>
-        }
-      />
+          path="/dashboard"
+          element={
+            <RequireAuth redirectTo="/">
+              <Dashboard />
+            </RequireAuth>
+          }
+        />
       </Routes>
     </BrowserRouter>
   )
