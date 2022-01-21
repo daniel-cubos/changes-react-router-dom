@@ -4,7 +4,8 @@ import {
   Routes
 } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
-import Login from './pages/Login';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 function RequireAuth({ children, redirectTo }) {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
@@ -18,7 +19,9 @@ export default function MyRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<SignIn />} />
+        <Route path="/sign-up/:type/:name" element={<SignUp />} />
+        <Route path="/test" element={<h1>Teste</h1>} />
         <Route
           path="/dashboard"
           element={
